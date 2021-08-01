@@ -1,8 +1,10 @@
+import { StyledWrapper } from "./styled"
+
 const Sidebar = () => {
     return (
-        <aside>
-            
-        </aside>
+        <StyledWrapper>
+            lg
+        </StyledWrapper>
     )
 }
 

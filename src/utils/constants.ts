@@ -1,4 +1,4 @@
-import { ILink } from "../types/vars";
+import { ILink } from "../types/interfaces";
 
 export const LINKS: ILink[] = [
     {

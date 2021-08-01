@@ -27,6 +27,7 @@ export const StyledLinkItem = styled(Link)`
         margin-right: 0;
     }
     &:hover {
-        background: #000;
+        background: #fff;
+        color: #000;
     }
 `

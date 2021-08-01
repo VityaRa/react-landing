@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 export const Typography = css`
     line-height: 1.2;
-    text-decoration: none;
 `
 
 export const RegularText = styled.p`
