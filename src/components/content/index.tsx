@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router';
+import { Switch, Route, Redirect } from 'react-router';
 
 import { StyledWrapper, StyledContainer } from './styled';
 
@@ -16,10 +16,13 @@ const Content = () => {
                     {
                         pages.map((page: IPage, index: number) => (
                             <Route key={index} exact path={page.route}>
-                                <Page title={page.title} component={page.component}></Page>
+                                <Page title={page.title} Component={page.Component}></Page>
                             </Route>
                         ))
                     }
+                    <Route exact>
+                        <Redirect to={'/about'} />
+                    </Route>
                 </Switch>
             </StyledWrapper>
         </StyledContainer>

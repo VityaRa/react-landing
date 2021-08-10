@@ -4,8 +4,9 @@ import { Link } from "react-router-dom"
 import { FlexCenter, FlexEnd, Container } from "../../styles/containers";
 import { Title } from "../../styles/typography";
 
-export const StyledContainer = styled(Container)`
+export const StyledContainer = styled.div`
     padding: 0 2vw;
+    width: 100%;
 `
 
 export const StyledLogoWrapper = styled(FlexCenter)`
@@ -28,6 +29,6 @@ export const StyledLinkItem = styled(Link)`
     }
     &:hover {
         background: #fff;
-        color: #000;
+        color: rgba(2,0,36,1);
     }
 `

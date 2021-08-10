@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { lightMainColor, darkMainColor } from './colors'
 
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -24,6 +25,6 @@ export const GlobalStyle = createGlobalStyle`
     }
     body {
         font-family: Montserrat;
-        background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(1,45,54,1) 100%);
+        background: linear-gradient(0deg, ${lightMainColor} 0%, ${darkMainColor} 100%);
     }
 `
