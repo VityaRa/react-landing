@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 import Root from './components/root/Root';
-import './index.css'
 import { GlobalStyle } from "./styles/global"
 
 ReactDOM.render(
