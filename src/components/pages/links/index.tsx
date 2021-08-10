@@ -7,8 +7,8 @@ export const Links = () => {
     return (
         <StyledList>
             {
-                links.map(link =>
-                    <StyledRef href={link.ref}>
+                links.map((link, index) =>
+                    <StyledRef key={index} href={link.ref}>
                         {<link.Icon />}
                     </StyledRef>)
             }

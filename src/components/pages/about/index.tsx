@@ -15,7 +15,7 @@ export const About = () => {
                 <StyledButton></StyledButton>
                 <StyledList onMouseLeave={() => setActiveId(0)}>
                     {aboutInfo.map((text: string, index: number) => (
-                        <StyledItem onMouseEnter={() => setActiveId(index + 1)}>{text}</StyledItem>
+                        <StyledItem key={index} onMouseEnter={() => setActiveId(index + 1)}>{text}</StyledItem>
                     ))}
                 </StyledList>
                 <StyledButton></StyledButton>

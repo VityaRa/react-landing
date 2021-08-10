@@ -5,7 +5,7 @@ import { StyledWrapper } from "./styled"
 export const Projects = () => {
     return (
         <StyledWrapper>
-            { projects.map(project => <ProjectItem info={project}/>) }
+            { projects.sort((a, b) => a.rating - b.rating).map((project, index) => <ProjectItem key={index} info={project}/>) }
         </StyledWrapper>
     )
 }

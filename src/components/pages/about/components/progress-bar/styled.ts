@@ -43,3 +43,8 @@ export const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const StyledContainer = styled.div`
+    display: flex;
+    align-items: center;
+`

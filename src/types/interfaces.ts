@@ -24,4 +24,5 @@ export interface IProject {
     ref: string,
     image: string,
     description: string,
+    rating: number,
 }
