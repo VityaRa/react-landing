@@ -6,7 +6,6 @@ import Sidebar from "../sidebar";
 
 import { StyledContainer, StyledWrapper } from "./styled";
 
-
 const Root = () => {
   return (
     <StyledContainer>

@@ -12,6 +12,7 @@ import {
 import { LINKS } from "../../utils/constants"
 
 const Header = () => {
+    
     return (
         <StyledContainer as="header">
             <FlexBetween>
