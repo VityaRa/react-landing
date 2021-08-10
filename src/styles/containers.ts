@@ -28,12 +28,11 @@ export const FlexEnd = styled(Flex)`
 
 export const Container = styled.div`
     width: 100%;
-    height: 100%;
     position: relative;
 `
 
 export const FullContainer = styled(Container)`
-    height: 100vh;
+    min-height: 100vh;
 `
 
 //Container end==================================================
