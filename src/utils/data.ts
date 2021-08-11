@@ -5,7 +5,7 @@ import { Skills } from "../components/pages/skills"
 
 import { VK, LinkedIn, Github, Instagram, Youtube } from "../assets/icons/icons"
 
-import { IPage, IProject, ISocialLink } from "../types/interfaces"
+import { IPage, IProject, ISkill, ISocialLink } from "../types/interfaces"
 
 export const pages: IPage[] = [
     {
@@ -31,8 +31,8 @@ export const pages: IPage[] = [
 ]
 
 export const aboutInfo: string[] = [
-    `Hi! I'm Victor Lobanov, ReactJS Developer`,
-    `I'm Victor Lobanov, React Developer`,
+    `Hey! I'm Victor Lobanov, React Developer!`,
+    `2`,
     `I'm Victor Lobanov, React Developer`,
 ]
 
@@ -125,5 +125,28 @@ export const projects: IProject[] = [
         image: "/image/ecwid.JPG",
         description: "TS/Webpack/SCSS task for ecwid",
         rating: 11,
+    },
+]
+
+export const skills: ISkill[] = [
+    {
+        name: "JavaScript",
+        value: 85,
+    },
+    {
+        name: "ReactJS",
+        value: 70,
+    },
+    {
+        name: "NextJS",
+        value: 20,
+    },
+    {
+        name: "CSS/SCSS",
+        value: 90,
+    },
+    {
+        name: "React Native",
+        value: 15,
     },
 ]

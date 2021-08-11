@@ -26,3 +26,8 @@ export interface IProject {
     description: string,
     rating: number,
 }
+
+export interface ISkill {
+    value: number,
+    name: string,
+}

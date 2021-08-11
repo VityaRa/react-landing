@@ -10,10 +10,13 @@ export const Page = ({ title, Component }: IProps) => {
     useEffect(() => {
         let interval = setInterval(() => {
             setOpacity(prev => prev + 0.2)
-        }, 20)
+        }, 1)
         setTimeout(() => {
             clearInterval(interval)
-        }, 300)
+        }, 200)
+        setTimeout(() => {
+            setOpacity(1)
+        }, 200)
     }, [])
 
     return (

@@ -12,8 +12,8 @@ const ProgressBar = ({ activeId }: IProps) => {
     return (
         <StyledWrapper>
             {aboutInfo.map((text: string, index: number) => (<StyledContainer key={index}>
-                <StyledCircle active={activeId >= index + 1}>{index + 1}</StyledCircle>
-                {index + 1 === aboutInfo.length ? "" : (<StyledLine active={activeId >= index + 2}></StyledLine>)}
+                <StyledCircle active={activeId >= index}>{index + 1}</StyledCircle>
+                {index + 1 === aboutInfo.length ? "" : (<StyledLine active={activeId >= index + 1}></StyledLine>)}
             </StyledContainer>
             ))}
         </StyledWrapper>

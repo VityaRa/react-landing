@@ -11,11 +11,13 @@ export const StyledContainer = styled.div`
 export const StyledTextWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0.3vw;
 `
 
 
 export const StyledText = styled.p`
     text-align: left;
+    font-size: 22px;
 `
 
 export const StyledLine = styled.div`
