@@ -1,3 +1,7 @@
 export const ArrowIcon = () => (
-    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd"><path d="M4 .755l14.374 11.245-14.374 11.219.619.781 15.381-12-15.391-12-.609.755z" /></svg>
+    <svg width="20" height="20" viewBox="0 0 82 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.76777" y1="2.23223" x2="76.014" y2="76.4784" stroke="black" strokeWidth="20" />
+        <line x1="5.23223" y1="150.478" x2="79.4784" y2="76.2322" stroke="black" strokeWidth="20" />
+    </svg>
+
 )

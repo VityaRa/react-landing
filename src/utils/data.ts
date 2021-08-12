@@ -7,34 +7,12 @@ import { VK, LinkedIn, Github, Instagram, Youtube } from "../assets/icons/icons"
 
 import { IPage, IProject, ISkill, ISocialLink } from "../types/interfaces"
 
-export const pages: IPage[] = [
-    {
-        route: "/about",
-        title: "About",
-        Component: About,
-    },
-    {
-        route: "/skills",
-        title: "Skills",
-        Component: Skills,
-    },
-    {
-        route: "/projects",
-        title: "Projects",
-        Component: Projects,
-    },
-    {
-        title: "Links",
-        route: "/links",
-        Component: Links,
-    }
-]
+import { getYear } from "./getYear"
+import { getOrder } from "./getOrder"
 
-export const aboutInfo: string[] = [
-    `Hey! I'm Victor Lobanov, React Developer!`,
-    `2`,
-    `I'm Victor Lobanov, React Developer`,
-]
+
+
+
 
 export const links: ISocialLink[] = [
     {
@@ -150,3 +128,41 @@ export const skills: ISkill[] = [
         value: 15,
     },
 ]
+
+export const aboutInfo: string[] = [
+    `Hi! I'm Victor Lobanov and I'm React Developer!`,
+    `I'm ${getYear()} years old, student in my ${getOrder()} year at SUAI`,
+    `Currently, I'm working in the company "Sixhands", Saint-Petersburg as React Developer`,
+    `You can look at my /skills/, /projects/ or /links/ using navigation bar at the top right`,
+]
+
+export const pages: IPage[] = [
+    {
+        route: "/about",
+        title: "About",
+        Component: About,
+    },
+    {
+        route: "/skills",
+        title: "Skills",
+        Component: Skills,
+    },
+    {
+        route: "/projects",
+        title: "Projects",
+        Component: Projects,
+    },
+    {
+        title: "Links",
+        route: "/links",
+        Component: Links,
+    }
+]
+
+export const navLinks = pages.map(page => (
+    {
+        name: page.title,
+        ref: page.route,
+    }
+))
+

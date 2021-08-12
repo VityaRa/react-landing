@@ -9,10 +9,9 @@ import {
     StyledLinkItem
 } from "./styled"
 
-import { LINKS } from "../../utils/constants"
+import { navLinks } from "../../utils/data"
 
 const Header = () => {
-    
     return (
         <StyledContainer as="header">
             <FlexBetween>
@@ -23,7 +22,7 @@ const Header = () => {
                 </StyledLogoWrapper>
                 <StyledLinkWrapper>
                     {
-                        LINKS.map((link, index) => (
+                        navLinks.map((link, index) => (
                             <StyledLinkItem key={index} to={link.ref}>{link.name}</StyledLinkItem>
                         ))
                     }

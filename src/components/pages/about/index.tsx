@@ -1,20 +1,31 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-import { StyledWrapper, StyledItem, StyledList, StyledButton, StyledSlider, StyledIconWrapper } from "./styled"
+import {
+    StyledWrapper,
+    StyledItem,
+    StyledList,
+    StyledButton,
+    StyledSlider,
+    StyledIconWrapper,
+    StyledReversedButton
+} from "./styled"
 
-import ProgressBar from "./components/progress-bar"
 import { aboutInfo } from "../../../utils/data"
 import { ArrowIcon } from "../../../assets/icons/arrow"
+
+import ProgressBar from "./components/progress-bar"
+import { InlineRef } from "../../common/inline-ref"
+import { ACTIVE_ID } from "../../../utils/constants"
 
 
 export const About = () => {
 
     const [activeId, setActiveId] = useState<number>(0)
 
-
     const increment = () => {
         if (activeId + 1 >= aboutInfo.length) setActiveId(0)
         else setActiveId(prev => ++prev)
+
     }
 
     const decrement = () => {
@@ -22,15 +33,28 @@ export const About = () => {
         else setActiveId(prev => --prev)
     }
 
+    useEffect(() => {
+        const fetched = localStorage.getItem(ACTIVE_ID)
+        if (fetched) {
+            setActiveId(+fetched)
+        }
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem(ACTIVE_ID, activeId + '')
+    }, [activeId])
+
     return (
         <StyledWrapper>
             <StyledSlider>
-                <StyledButton onClick={decrement}>
+                <StyledReversedButton onClick={decrement}>
                     <StyledIconWrapper><ArrowIcon /></StyledIconWrapper>
-                </StyledButton>
+                </StyledReversedButton>
                 <StyledList >
                     {aboutInfo.map((text: string, index: number) => (
-                        <StyledItem visible={index === activeId} key={index}>{text}</StyledItem>
+                        <StyledItem visible={index === activeId} key={index}>
+                            {text.includes('/') ? <InlineRef text={text} /> : text}
+                        </StyledItem>
                     ))}
                 </StyledList>
                 <StyledButton onClick={increment}>

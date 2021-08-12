@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { darkMainColor } from "../../../styles/colors"
+
 interface IVisible {
     visible: boolean,
 }
@@ -11,7 +13,7 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledItem = styled.div`
-    padding: 2vw 0;
+    padding: 2vw 3vw;
     font-size: 30px;
     height: 20vw;
     width: 30vw;
@@ -21,12 +23,18 @@ export const StyledItem = styled.div`
     display: ${(props: IVisible) => props.visible ? "flex" : "none"};
     justify-content: center;
     align-items: center;
+    cursor: default;
+    text-align: left;
 `
 
 export const StyledList = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 4vw;
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 export const StyledButton = styled.button`
@@ -36,6 +44,16 @@ export const StyledButton = styled.button`
     max-height: 30px;
     border-radius: 50%;
     cursor: pointer;
+    &:hover {
+        background-color: ${darkMainColor};
+    }
+    &:hover svg line {
+        stroke: white;
+    }
+`
+
+export const StyledReversedButton = styled(StyledButton)`
+    transform: rotate(180deg);
 `
 
 export const StyledSlider = styled.div`
@@ -43,14 +61,16 @@ export const StyledSlider = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-top: 3vw;
 `
 
 export const StyledIconWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    svg {
-        width: 100%;
-        height: 100%;
-    }
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+
 `
