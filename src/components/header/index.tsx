@@ -11,7 +11,11 @@ import {
 
 import { navLinks } from "../../utils/data"
 
+import useResolution from "../../hooks/useResolution"
+
 const Header = () => {
+    const isMobile = useResolution()
+
     return (
         <StyledContainer as="header">
             <FlexBetween>
@@ -20,13 +24,19 @@ const Header = () => {
                         FRONTEND
                     </StyledLogoText>
                 </StyledLogoWrapper>
-                <StyledLinkWrapper>
-                    {
-                        navLinks.map((link, index) => (
-                            <StyledLinkItem key={index} to={link.ref}>{link.name}</StyledLinkItem>
-                        ))
-                    }
-                </StyledLinkWrapper>
+                {
+                    !isMobile ? 
+                    <StyledLinkWrapper>
+                        {
+                            navLinks.map((link, index) => (
+                                <StyledLinkItem key={index} to={link.ref}>{link.name}</StyledLinkItem>
+                            ))
+                        }
+                    </StyledLinkWrapper> :
+                    null
+                    // <BurgerButton />
+                }
+
             </FlexBetween>
         </StyledContainer>
     )

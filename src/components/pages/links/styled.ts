@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const StyledList = styled.div`
     display: flex;
     margin-top: 8vw;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const StyledRef = styled.a`
@@ -29,10 +34,15 @@ export const StyledRef = styled.a`
         fill: white;
     }
 
-    // &:hover {
-        //     background-color: white;
-        // }
-        // &:hover svg{
-        //     fill: black;
-        // }
+    @media screen and (max-width: 600px) {
+        margin-right: 0;
+
+    }
+
+    @media screen and (max-width: 1000px) {
+        width: 10vw;
+        height: 10vw;
+        min-width: 70px;
+        min-height: 70px;
+    }
 `

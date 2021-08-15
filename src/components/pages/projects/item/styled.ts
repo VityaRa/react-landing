@@ -6,6 +6,7 @@ const borderValue = "8px";
 
 export const StyledInner = styled.div`
     padding: 1.25vw;
+    height: 100%;
 `
 export const StyledImageWrapper = styled.div`
     position: relative;
@@ -15,6 +16,11 @@ export const StyledImageWrapper = styled.div`
     border-top-left-radius: ${borderValue};
     border-top-right-radius: ${borderValue};
     overflow: hidden;
+
+    
+    @media screen and (max-width: 600px) {
+        height: 40vw;
+    }
 `
 export const StyledImage = styled.img`
     width: 100%;
@@ -29,6 +35,10 @@ export const StyledTextWrapper = styled.div`
     border-bottom-left-radius: ${borderValue};
     border-bottom-right-radius: ${borderValue};
     box-shadow: inset 0px 15px 29px 18px  rgba(34, 60, 80, 0.2);
+
+    @media screen and (max-width: 600px) {
+        padding: 3vw;
+    }
 `
 
 
@@ -58,6 +68,10 @@ export const StyledContainer = styled.div`
         transform: scale(1.2);
         filter: blur(2px)
                 brightness(50%);
+    }
+
+    @media screen and (max-width: 600px) {
+        height: 60vw;
     }
 `
 

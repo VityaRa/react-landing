@@ -10,13 +10,15 @@ export const StyledContainer = styled.div`
 `
 
 export const StyledLogoWrapper = styled(FlexCenter)`
-    width: 30vw;
     padding: 1.25vw;
 `
 
 export const StyledLogoText = styled(Title)`
     font-weight: 900;
+    font-size: 20px;
+
 `
+
 export const StyledLinkWrapper = styled(FlexEnd)`
     height: 100%;
 `

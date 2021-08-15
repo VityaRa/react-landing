@@ -25,6 +25,11 @@ export const StyledItem = styled.div`
     align-items: center;
     cursor: default;
     text-align: left;
+
+    @media screen and (max-width: 600px) {
+        height: unset;
+        width: unset;
+    }
 `
 
 export const StyledList = styled.div`
