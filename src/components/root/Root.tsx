@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Route, Switch } from "react-router";
 import Content from "../content";
 
@@ -7,12 +8,14 @@ import Sidebar from "../sidebar";
 import { StyledContainer, StyledWrapper } from "./styled";
 
 const Root = () => {
+  const [open, setOpen] = useState(false)
+
   return (
     <StyledContainer>
-      <StyledWrapper>  
-        <Header />
+      <StyledWrapper>
+        <Header open={open} setOpen={setOpen}/>
         <Content />
-        <Sidebar />
+        <Sidebar open={open} setOpen={setOpen} />
       </StyledWrapper>
     </StyledContainer>
   );

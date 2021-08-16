@@ -61,7 +61,7 @@ export const About = () => {
                     <StyledIconWrapper><ArrowIcon /></StyledIconWrapper>
                 </StyledButton>
             </StyledSlider>
-            <ProgressBar activeId={activeId}></ProgressBar>
+            <ProgressBar setActiveId={setActiveId} activeId={activeId}></ProgressBar>
         </StyledWrapper>
     )
 }

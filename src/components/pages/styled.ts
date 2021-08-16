@@ -15,4 +15,5 @@ export const StyledTitle = styled(Title)`
 export const StyledContent = styled.div`
     margin-bottom: 5vw;
     margin-top: 2vw;
+
 `

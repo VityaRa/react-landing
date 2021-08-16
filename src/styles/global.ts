@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         color: #fff;
         transition: all .4s ease-out;
         text-decoration: none;
+        ::-webkit-scrollbar { width: 0; }
     }
     img {
         height: 100%;

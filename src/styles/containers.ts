@@ -22,6 +22,10 @@ export const FlexBetween = styled(Flex)`
 export const FlexEnd = styled(Flex)`
     justify-content: flex-end;
 `
+
+export const FlexStart = styled(Flex)`
+    justify-content: flex-start;
+`
 //Flex end===========================================================
 
 //Container==================================================

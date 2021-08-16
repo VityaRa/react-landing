@@ -6,13 +6,14 @@ import { aboutInfo } from "../../../../../utils/data";
 
 interface IProps {
     activeId: number,
+    setActiveId: React.Dispatch<React.SetStateAction<number>>,
 }
 
-const ProgressBar = ({ activeId }: IProps) => {
+const ProgressBar = ({ activeId, setActiveId }: IProps) => {
     return (
         <StyledWrapper>
             {aboutInfo.map((text: string, index: number) => (<StyledContainer key={index}>
-                <StyledCircle active={activeId >= index}>{index + 1}</StyledCircle>
+                <StyledCircle onClick={() => setActiveId(index)} current={index === activeId} active={activeId >= index}>{index + 1}</StyledCircle>
                 {index + 1 === aboutInfo.length ? "" : (<StyledLine active={activeId >= index + 1}></StyledLine>)}
             </StyledContainer>
             ))}

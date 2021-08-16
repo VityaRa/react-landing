@@ -1,5 +1,3 @@
-import { ReactElement } from "react-dom/node_modules/@types/react";
-
 export type Ref = string
 
 export type VoidFunction = () => JSX.Element
@@ -30,4 +28,9 @@ export interface IProject {
 export interface ISkill {
     value: number,
     name: string,
+}
+
+export interface IOpen {
+    open: boolean,
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>,
 }

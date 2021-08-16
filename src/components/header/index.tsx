@@ -12,8 +12,14 @@ import {
 import { navLinks } from "../../utils/data"
 
 import useResolution from "../../hooks/useResolution"
+import { BurgerButton } from "../common/burger-btn"
 
-const Header = () => {
+interface IProps {
+    open: boolean,
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+}
+
+const Header = ({ open, setOpen }: IProps) => {
     const isMobile = useResolution()
 
     return (
@@ -25,16 +31,15 @@ const Header = () => {
                     </StyledLogoText>
                 </StyledLogoWrapper>
                 {
-                    !isMobile ? 
-                    <StyledLinkWrapper>
-                        {
-                            navLinks.map((link, index) => (
-                                <StyledLinkItem key={index} to={link.ref}>{link.name}</StyledLinkItem>
-                            ))
-                        }
-                    </StyledLinkWrapper> :
-                    null
-                    // <BurgerButton />
+                    !isMobile ?
+                        <StyledLinkWrapper>
+                            {
+                                navLinks.map((link, index) => (
+                                    <StyledLinkItem key={index} to={link.ref}>{link.name}</StyledLinkItem>
+                                ))
+                            }
+                        </StyledLinkWrapper> :
+                        <BurgerButton open={open} setOpen={setOpen} />
                 }
 
             </FlexBetween>

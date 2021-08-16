@@ -6,7 +6,7 @@ import background from "../../assets/background.jpg"
 
 
 export const StyledContainer = styled(FullContainer)`
-    
+    overflow: hidden;
 `
 
 export const StyledWrapper = styled(FlexCenter)`

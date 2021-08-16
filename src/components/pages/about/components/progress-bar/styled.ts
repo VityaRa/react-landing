@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { darkMainColor  , white } from "../../../../../styles/colors";
 
 interface ICircle {
-    active: boolean
+    active: boolean,
+    current?: boolean,
 }
 
 export const StyledCircle = styled.div`
@@ -22,6 +23,7 @@ export const StyledCircle = styled.div`
 
     background-color: ${(props: ICircle) => props.active ? darkMainColor : white};
     color: ${(props: ICircle) => props.active ? white : darkMainColor};
+    transform: ${(props: ICircle) => props.current ? 'scale(1.3)' : 'scale(1)'};
 `
 
 export const StyledLine = styled.div`

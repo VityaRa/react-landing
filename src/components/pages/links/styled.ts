@@ -35,14 +35,15 @@ export const StyledRef = styled.a`
     }
 
     @media screen and (max-width: 600px) {
+        min-width: 150px !important;
+        min-height: 150px !important;
         margin-right: 0;
-
     }
 
     @media screen and (max-width: 1000px) {
         width: 10vw;
         height: 10vw;
-        min-width: 70px;
-        min-height: 70px;
+        min-width: 100px;
+        min-height: 100px;
     }
 `
